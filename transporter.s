@@ -16,14 +16,14 @@ read_save:
 
 .org 0x21ab50
 write_save:
-  stmdb sp!, { r2, r3, pc }
+  stmdb sp!, { r2, r3, lr }
   eor r2, r2, r3              ; swap r2 and r3
   eor r3, r2, r3
   eor r2, r2, r3
   bl write_save_to_sd
-  ldmia sp!, { r2, r3, lr }
+  ldmia sp!, { r2, r3, pc }
 
-.org 0x28d4bc
+.org 0x28dd00
 .include "sd-save-utils.s"
 
 .close

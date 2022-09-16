@@ -3,7 +3,7 @@
 
 fs_handle equ 0x1dba80
 FSUSER_OpenFileDirectly equ 0x124ea8
-FSFILE_ReadFile equ 0x1beeec
+FSFILE_ReadFile equ 0x139058
 FSFILE_WriteFile equ 0x1390dc
 FSFILE_Close equ 0x1390b0
 
